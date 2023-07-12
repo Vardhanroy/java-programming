@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main{
+public static void main(String[] args){
+try
+{
+Scanner input=new Scanner(System.in);
+System.out.println("enter the number:");
+int n=input.nextInt();
+int factorial=fact(n);
+System.out.println("factorial of entered number is:"+factorial);
+}
+catch(Exception e)
+{
+System.out.println("enter only numbers");
+}
+}
+public static int fact(int a)
+{
+int output;
+if(a==0)
+{
+return 1;
+}
+else
+output=fact(a-1)*a;
+return output;
+}
+}
