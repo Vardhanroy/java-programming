@@ -1,0 +1,40 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        try
+        {
+            Scanner input=new Scanner(System.in);
+            System.out.println("Enter * to exit...");
+            char ch;
+            int l_count=0,u_count=0,digit_count=0;
+            while(true)
+            {
+                System.out.println("enter any character:");
+                ch=input.next().charAt(0);
+                if(ch=='*')
+                {
+                    break;
+                }
+                else if(Character.isUpperCase(ch))
+                {
+                    u_count++;
+                }
+                else if (Character.isLowerCase(ch))
+                {
+                    l_count++;
+                }
+                else if(Character.isDigit(ch))
+                {
+                    digit_count++;
+                }
+            }
+            System.out.println("count of upper case :"+u_count);
+            System.out.println("count of lower case:"+l_count);
+            System.out.println("count of digits:"+digit_count);
+        }
+        catch(Exception e)
+        {
+            System.out.println("enter characters only");
+        }
+    }
+}
